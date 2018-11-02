@@ -1,0 +1,99 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Parcel Order Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1><a href="index.html"><span class="red-span">Send</span>IT</a></h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="#">Sign Out</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <h3 id="user-note">Hello, here are the details regarding your Parcel
+    Delivery Order</h3>
+
+  <section>
+    <table class="order-details">
+      <tr>
+        <th class="order-h">Date Created</th>
+        <td>12/10/2018</td>
+      </tr>
+      <tr>
+        <th class="order-h">Order Name</th>
+        <td>Success Cards</td>
+      </tr>
+      <tr>
+        <th class="order-h">Created by</th>
+        <td>hopeful_parent</td>
+      </tr>
+      <tr>
+        <th class="order-h">Pickup Location</th>
+        <td>Nairobi, CBD</td>
+      </tr>
+      <tr>
+        <th class="order-h">Destination</th>
+        <td>Nanyuki, CBD</td>
+      </tr>
+      <tr>
+        <th class="order-h">Current Location</th>
+        <td>Nyeri</td>
+      </tr>
+      <tr>
+        <th class="order-h">Status</th>
+        <td>In Transit</td>
+      </tr>
+      <tr>
+        <th class="order-h">Order Number</th>
+        <td>#45980523w23we</td>
+      </tr>
+    </table>
+  </section>
+  <hr>
+
+  <h4 id="why-change-d">Please fill out the form below if you would like to change
+    the destination of your current order. Additional fees apply.
+  </h4>
+  <div>
+    <form id="change-d" method="POST">
+      <label for="new-d">New Destination</label> <br>
+      <input name="new-d" id="new-d" required> <br>
+      <p>Why are you changing your destination?</p>
+      <textarea form="change-d" rows=4 cols=50 placeholder="Would you like to tell us why you are changing the destination? Please use maximum of 500 characters."></textarea>
+      <br>
+      <button name="center-b" class="btn" type="submit">Submit</button>
+
+    </form>
+  </div>
+  <hr>
+
+  <p id="ask-cancel">Would you like to cancel this delivery?</p>
+  <form id="user-control">
+      <label class="change-d">No</label>
+      <input type="radio" name="radio" checked="checked">
+      <label class="change-d">Yes</label>
+      <input type="radio" name="radio">
+      <button class="btn" type="submit">Confirm</button>
+  </form>
+  
+  <footer>
+    <p class="foot">SendIT &copy; 2018</p>
+  </footer>
+
+</body>
+
+</html>
