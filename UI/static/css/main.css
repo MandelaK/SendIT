@@ -264,14 +264,23 @@ header nav li {
   padding: 0 16px   0 16px;
 }
 
-.logo {
+.logo-t {
   float: left;
   margin-left: 10%;
 }
 
-.logo h1 {
+.logo-t h1 {
   margin: 0;
   text-decoration: none;
+}
+
+.logo-p {
+    width: 4%;
+    height: 4%;
+    position: absolute;
+    top: 4%;
+    left: 5%;
+  
 }
 
 header nav {
