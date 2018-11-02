@@ -1,79 +1,86 @@
 <!DOCTYPE <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin Control</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin Control</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
 </head>
+
 <body>
-  <header>
-    <div class="logo">
-      <h1><a href="index.html"><span class="red-span">Send</span>IT</a></h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="profile.html">Profile</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <a href="index.html">
+            <img src="../img/sendit.png" class="logo-p">
+        </a>
+        <div class="logo-t">
+            <h1><a href="index.html"><span class="red-span">Send</span>IT</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#">Log out</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <h3 id="admin-note">Hello. From this page you can change the current Location
-    and status of the order.
-  </h3>
+    <h3 id="admin-note">Hello. From this page you can change the current Location
+        and status of the order.
+    </h3>
 
-  <section>
-      <table class="order-details">
-          <tr>
-              <th class="order-h">Date Created</th>
-              <td>12/10/2018</td>
-          </tr>
-          <tr>
-              <th class="order-h">Order Name</th>
-              <td>Success Cards</td>
-          </tr>
-          <tr>
-              <th class="order-h">Created by</th>
-              <td>hopeful_parent</td>
-          </tr>
-          <tr>
-              <th class="order-h">Pickup Location</th>
-              <td>Nairobi, CBD</td>
-          </tr>
-          <tr>
-              <th class="order-h">Destination</th>
-              <td>Nanyuki, CBD</td>
-          </tr>
-          <tr>
-              <th class="order-h">Current Location</th>
-              <td>Nyeri</td>
-          </tr>
-          <tr>
-              <th class="order-h">Status</th>
-              <td>In Transit</td>
-          </tr>
-          <tr>
-              <th class="order-h">Order Number</th>
-              <td>#45980523w23we</td>
-          </tr>
-      </table>
-  </section>
+    <section>
+        <table class="order-details">
+            <tr>
+                <th class="order-h">Date Created</th>
+                <td>12/10/2018</td>
+            </tr>
+            <tr>
+                <th class="order-h">Order Name</th>
+                <td>Success Cards</td>
+            </tr>
+            <tr>
+                <th class="order-h">Created by</th>
+                <td>hopeful_parent</td>
+            </tr>
+            <tr>
+                <th class="order-h">Pickup Location</th>
+                <td>Nairobi, CBD</td>
+            </tr>
+            <tr>
+                <th class="order-h">Destination</th>
+                <td>Nanyuki, CBD</td>
+            </tr>
+            <tr>
+                <th class="order-h">Current Location</th>
+                <td>Nyeri</td>
+            </tr>
+            <tr>
+                <th class="order-h">Status</th>
+                <td>In Transit</td>
+            </tr>
+            <tr>
+                <th class="order-h">Order Number</th>
+                <td>#45980523w23we</td>
+            </tr>
+        </table>
+    </section>
 
-  <form id="admin-control">
-    <label for="current-loc">Change Current location</label>
-    <input type=text id="current-loc" required>
-    <p>Change the current location of this delivery</p>
-    <label class="status">In transit</label>
-    <input type="radio" name="radio" checked="checked">
-    <label class="status">Delivered</label>
-    <input type="radio" name="radio">
-    <button class="btn" type="submit">Confirm</button>
-  </form>
+    <form id="admin-control">
+        <label for="current-loc">Change Current location</label>
+        <input type=text id="current-loc" required>
+        <p>Change the status of this delivery</p>
+        <label class="status">In transit</label>
+        <input type="radio" name="radio" checked="checked">
+        <label class="status">Delivered</label>
+        <input type="radio" name="radio">
+        <button class="btn" type="submit">Confirm</button>
+    </form>
 
-  <footer>
-    <p class="foot">SendIT &copy; 2018</p>
-  </footer>
+    <footer>
+        <p class="foot">SendIT &copy; 2018</p>
+    </footer>
 </body>
+
 </html>
