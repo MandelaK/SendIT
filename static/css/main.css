@@ -1,9 +1,9 @@
-* {
+/* * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+ */
 body {
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
@@ -203,7 +203,7 @@ Details page styling
 Navbar sytling
 ===========================================================*/
 
-.dropnav {
+/* .dropnav {
   float: right;
   overflow: hidden;
 }
@@ -239,11 +239,11 @@ li .dropnav {
 
 nav a:hover, .dropnav:hover .dropbtn {
   background-color: aqua;    
-}
+} */
 
 /* Header */
 header {
-  background: #b6e4f5;
+  background: #a0e6ff;
   color: white;
   padding-top: 25px;
   min-height: 70px;
@@ -251,34 +251,69 @@ header {
 }
 
 header a {
-  color: white;
   text-decoration: none;
-  font-size: 20px;
+  color: white;
 }
 
-header ul {
-  list-style-type: none;
+
+header nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: aliceblue;
+  background-color: #ade9ff;
 }
 
-header li {
-  float: left;
+header nav li {
+
   display: inline;
-  padding: 0 16px 0 16px;
+  padding: 0 16px   0 16px;
 }
 
 .logo {
   float: left;
+  margin-left: 10%;
 }
 
 .logo h1 {
   margin: 0;
+  text-decoration: none;
 }
 
 header nav {
   float: right;
-  margin-top: 8px;
+  margin-top: 10px;
+  margin-right: 5%;
+  font-size: 18px;
+}
+
+.red-span {
+  color: rgb(0, 153, 255);
+}
+
+.avatar {
+  width: 35%;
+  height: 30%;
+  position: absolute;
+  top: 25%;
+  left: 33%;
+}
+
+.scream {
+  text-align: center;
+  color: rgb(121, 121, 121);
+}
+
+#what-we-do {
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  padding: 18% 5% 5% 5%;
+  font-size: 18px;
+}
+
+footer {
+  color: white;
+  background-color: #166f92;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
 }
