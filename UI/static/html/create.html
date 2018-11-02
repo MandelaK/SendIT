@@ -1,56 +1,47 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Create Package Delivery Order</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
-    </head>
 
-    <body>
-        <header>
-            <!--<div class="container"> -->
-                <div class="logo">
-                    <h1>SendIT</h1>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="profile.html">Profile</a></li>
-                        <div class="dropnav">
-                            <button class="dropbtn">Manage Your Parcels
-                                <i class="caret-down"></i>
-                            </button>
-                            <div class="dropdown-content">
-                                <a href="create.html">Create an order</a>
-                                <a href="details.html">Change parcel destination</a>
-                                <a href="details.html">View order details</a>
-                                <a href="details.html">Cancel an order</a>
-                                <a href="profile.html">View all orders</a>
-                            </div>
-                        </div>
-                    </ul>
-                </nav>  
-            <!-- </div> -->     
-            <!-- <div class="sign-out">
-                <a href="#sign-out">Sign out</a>
-            </div> -->
-            </div>
-        </header>
-        <h3 class="create-info">Please enter the following information so you may create a delivery order.</h3>
-        <div class="create-order">
-            <form method="POST">
-                <label for="package_name">Package Name</label>
-                <input name="package_name" id="package_name" required> <br>
-                <label for="destination">Destination</label>
-                <input name="destination" id="destination" required> <br>
-                <label for="pickup_location">Pickup Location</label>
-                <input name="pickup_location" id="pickup_location" required> <br>
-                <label for="weight">Weight (in grams)</label>
-                <input type="number" name="weight" id="weight">
-                <button class="btn" type="submit">Submit</button>
-            </form>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Create Package Delivery Order</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="../img/sendit.png" class="logo-p">
+        </a>
+        <div class="logo-t">
+            <h1><a href="index.html"><span class="red-span">Send</span>IT</a></h1>
         </div>
-    </body>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#">Log out</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h3 class="create-info">Please enter the following information so you may create a delivery order.</h3>
+    <div class="create-order">
+        <form method="POST">
+            <label for="package_name">Package Name</label>
+            <input name="package_name" id="package_name" required> <br>
+            <label for="destination">Destination</label>
+            <input name="destination" id="destination" required> <br>
+            <label for="pickup_location">Pickup Location</label>
+            <input name="pickup_location" id="pickup_location" required> <br>
+            <label for="weight">Weight (in grams)</label>
+            <input type="number" name="weight" id="weight">
+            <button class="btn" type="submit">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <p class="foot">SendIT &copy; 2018</p>
+    </footer>
+</body>
+
 </html>

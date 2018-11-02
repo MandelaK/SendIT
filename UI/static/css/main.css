@@ -65,7 +65,8 @@ Generic table styling
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 80%;
+  margin-left: 10%;
 }
 
 td, th {
@@ -91,6 +92,13 @@ Profile page styling
   text-align: center;
   color: #44a7ce;
 }
+
+.prof-note {
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 5%;
+}
+
 
 /* =======================================================
 Create PDO page styling
