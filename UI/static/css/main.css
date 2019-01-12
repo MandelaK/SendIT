@@ -8,11 +8,17 @@
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
-  background-color: #e7fcff;
+  background-color: #e5ffff;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
 }
 
 /* =================================================
-Registration Form styling. 
+Registration Form styling.
 ==================================================*/
 
 .reg-forms {
@@ -208,49 +214,15 @@ Details page styling
   border: none;
 }
 
-/*=============================================================
-Navbar sytling
-===========================================================*/
-
-/* .dropnav {
-  float: right;
-  overflow: hidden;
-}
-.dropnav a, .dropbtn {
-  display: inline-block;
-  font-size: 16px;
-  border: none;
-  color: white;
-  padding: 10px, 10px;
-  margin: 0;
-}
-li .dropnav {
-  display: inline-block;
-}
-.dropdown-content a {
-  color: black;
-  padding: 10px, 10px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-.dropnav:hover .dropdown-content {
-  display: block;
-}
-nav a:hover, .dropnav:hover .dropbtn {
-  background-color: aqua;    
-} */
-
-/* Header */
+/*=====================================================
+Header and navbar sytling
+=======================================================*/
 header {
-  background: #a0e6ff;
+  background: #82d5ff;
   color: white;
-  padding-top: 25px;
-  min-height: 70px;
-  border-bottom: #3a04ff 5px solid;
+  padding-top: 15px;
+  min-height: 50px;
+  border-bottom: #ffffff 2px solid;
 }
 
 header a {
@@ -263,13 +235,29 @@ header nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #ade9ff;
 }
 
 header nav li {
-
+  float: left;
   display: inline;
-  padding: 0 16px   0 16px;
+  padding: 0 5px 0 5px;
+}
+
+header nav {
+  float: right;
+  margin-top: 10px;
+  margin-right: 1%;
+  font-size: 18px;
+}
+
+header .current a {
+  color: #2d50ff;
+  font-weight: bold;
+}
+
+header a:hover{
+  color: #129cff;
+  font-weight: bold;
 }
 
 .logo-t {
@@ -288,14 +276,7 @@ header nav li {
     position: absolute;
     top: 4%;
     left: 5%;
-  
-}
 
-header nav {
-  float: right;
-  margin-top: 10px;
-  margin-right: 5%;
-  font-size: 18px;
 }
 
 .red-span {
@@ -310,9 +291,10 @@ header nav {
   left: 33%;
 }
 
-.scream {
+#h1-index {
+  font-size: 36px;
   text-align: center;
-  color: rgb(121, 121, 121);
+  color: #225f94;
 }
 
 #what-we-do {
