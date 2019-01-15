@@ -10,42 +10,58 @@
 
 <body>
     <header>
-        <a href="index.html">
-            <img src="../img/sendit.png" class="logo-p">
-        </a>
-        <div class="logo-t">
-            <h1><a href="index.html"><span class="red-span">Send</span>IT</a></h1>
+        <div class="container">
+            <div class="logo-t">
+                <h1><a href="index.html"><span class="red-span">Send</span>IT</a></h1>
+            </div>
+            <nav id="nav-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a id="prof-status"></a></li>
+                    <li><a id="create-status"></a></li>
+                    <li><a id="logstatus"></a></li>
+                    <li><a id="logstatusb"></a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="login.html">Log In</a></li>
-            </ul>
-        </nav>
     </header>
+    </header>
+    <div class="container">
+        <div class="reg-forms">
+            <form method="POST">
+                <h1 class="reg-head">Create an account</h1>
+                <p class="reg-info">Please enter your details to create an account</p>
+                <hr>
+                <label for="first_name">First Name: </label>
+                <input type="text" id="first_name" placeholder="Enter your first name." required> <br>
+                <label for="last_name">Last Name: </label>
+                <input type="text" id="last_name" placeholder="Enter your last name." required> <br>
+                <label for="emails">Email: </label>
+                <input type="email" id="emails" placeholder="Enter email address" required> <br>
+                <label for="phone">Phone: </label>
+                <input type="text" id="phone" placeholder="Enter your phone number" required> <br>
+                <label for="create_password">Password: </label>
+                <input name="password" type="password" id="create_password" placeholder="Enter password" required> <br>
+                <label for="password_repeat">Repeat Your Password:</label>
+                <input name="password_repeat" type="password" id="password_repeat" placeholder="Repeat password"
+                    required> <br>
+                <input type="checkbox" name="eula" id="eula" required>
+                <label for="eula">I have read the <a href="#">Terms of service</a> and <a href="#">privacy agreement</a> and agree with all terms included therein.</label> <br>
+                <button class="btn" type="submit" id="register">Register</button>
+            </form>
 
-    <div class="reg-forms">
-        <form method="POST">
-            <h1 class="reg-head">Create an account</h1>
-            <p class="reg-info">Please enter your details to create an account</p>
-            <hr>
-            <label for="first_name">First Name: </label>
-            <input type="text" id="first_name" placeholder="Please enter your first name." required> <br>
-            <label for="last_name">Last Name: </label>
-            <input type="text" id="last_name" placeholder="Please enter your last name." required> <br>
-            <label for="emails">Email: </label>
-            <input type="email" id="emails" placeholder="Enter valid email address" required> <br>
-            <label for="create_password">Password: </label>
-            <input name="password" type="password" id="create_password" placeholder="Enter password" required> <br>
-            <label for="password_repeat">Repeat Your Password:</label>
-            <input name="password_repeat" type="password" id="password_repeat" placeholder="Repeat your password"
-                required> <br>
-            <input type="checkbox" name="eula" id="eula" required>
-            <label for="eula">I have read the <a href="#">Terms of service</a> and <a href="#">privacy agreement</a> and agree with all terms included therein.</label> <br>
-            <button class="btn" type="submit">Register</button>
-        </form>
+            <p>Do you already have an account? <a href="login.html">Sign in here.</a></p>
+        </div>
 
-        <p>Do you already have an account? <a href="login.html">Sign in here.</a></p>
-    </div>
+    <p id="login-success"></p>
+    <p id="login-fail"></p>
+
+</div>
+
+    <script src="../scripts/signup.js"></script>
+    <footer>
+        <p class="foot">SendIT &copy; 2018</p>
+    </footer>
 </body>
 </html>
