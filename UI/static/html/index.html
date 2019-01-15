@@ -14,28 +14,28 @@
 
 <body>
     <header>
-        <a href="index.html">
-            <img src="../img/sendit.png" class="logo-p">
-        </a>
         <div class="container">
             <div class="logo-t">
                 <h1><a href="index.html"><span class="red-span">Send</span>IT</a></h1>
             </div>
-            <nav>
+            <nav id="nav-bar">
                 <ul>
                     <li class="current"><a href="index.html">Home</a></li>
-                    <li><a href="login.html">Log In</a></li>
-                    <li><a href="register.html">Sign Up</a></li>
+
+                    <li><a id="prof-status"></a></li>
+                    <li><a id="create-status"></a></li>
+                    <li><a id="logstatus"></a></li>
+                    <li><a id="logstatusb"></a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <section id="intro">
-        <div class="container">
+
             <h1 id="h1-index">SendIT Today!</h1>
             <img src="../img/favicon.png" class="avatar">
-
+            <div class="container">
             <p id="what-we-do">SendIT is a parcel delivery service that is convenient for you.
                 You can create an order and send it at the convenience of your home! All deliveries
             priced by their weight and you can also get to track you parcel from your profile. What's more,
@@ -46,6 +46,8 @@
     <footer>
         <p class="foot">SendIT &copy; 2018</p>
     </footer>
+    <script src="../scripts/logout.js"></script>
+    <script src="../scripts/navbar.js"></script>
 </body>
 
 </html>
