@@ -11,70 +11,44 @@
 
 <body>
     <header>
-        <a href="index.html">
-            <img src="../img/sendit.png" class="logo-p">
-        </a>
-        <div class="logo-t">
-            <h1><a href="index.html"><span class="red-span">Send</span>IT</a></h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="create.html">Create a Delivery</a></li>
-                <li><a href="#">Log out</a></li>
-            </ul>
-        </nav>
-    </header>
-    <h1 class="prof-head">Your User Profile</h1>
-    <p class="prof-info">Hello, below is you user profile. You can see all the deliveries you have made
-        and much more.
-    </p>
+        <div class="container">
+            <div class="logo-t">
+                <h1><a href="index.html"><span class="red-span">Send</span>IT</a></h1>
+            </div>
+            <nav id="nav-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
 
-    <hr>
-    <h4 class="prof-note">You have made 2 deliveries and one is in transit.</h4>
-    <div class="prof-table">
-        <table>
-            <tr>
-                <th>Order Name</th>
-                <th>Status</th>
-                <th>Weight (grams)</th>
-                <th>Pickup Location</th>
-                <th>Destination</th>
-                <th>Date Sent</th>
-            </tr>
-            <tr>
-                <td><a href="details.html">Success Cards</a></td>
-                <td>Delivered</td>
-                <td>50</td>
-                <td>Nairobi, CBD</td>
-                <td>N/A</td>
-                <td>20/1/2018</td>
-            </tr>
-            <tr>
-                <td><a href="details.html">Attachment Letter</a></td>
-                <td>In transit</td>
-                <td>50</td>
-                <td>Nairobi, CBD</td>
-                <td>Nairobi, Ruiru</td>
-                <td>23/7/2018</td>
-            </tr>
-            <tr>
-                <td><a href="details.html">Divorce Letter</a></td>
-                <td>Delivered</td>
-                <td>50</td>
-                <td>Nairobi, CBD</td>
-                <td>Nanyuki, CBD</td>
-                <td>13/11/2018</td>
-            </tr>
-        </table>
+                    <li class="current"><a id="prof-status"></a></li>
+                    <li><a id="create-status"></a></li>
+                    <li><a id="logstatus"></a></li>
+                    <li><a id="logstatusb"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h1 class="prof-head">Your User Profile</h1>
+        <p id="prof-info">
+        </p>
+
+        <hr>
+
+        <div id="table-output">
+
+        </div>
+
+        <p class="prof-note">If you want to change the destination of an order or cancel it entirely
+            you can click on the link of the order, under name.
+        </p>
+
     </div>
-    <p class="prof-note">If you want to change the destination of an order or cancel it entirely
-        you can click on the link of the order, under name.
-    </p>
 
     <footer>
         <p class="foot">SendIT &copy; 2018</p>
     </footer>
+    <script src="../scripts/logout.js"></script>
+    <script src="../scripts/profile.js"></script>
 </body>
 
 </html>
