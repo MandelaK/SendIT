@@ -11,18 +11,21 @@
 
 <body>
     <header>
-        <a href="index.html">
-            <img src="../img/sendit.png" class="logo-p">
-        </a>
-        <div class="logo-t">
-            <h1><a href="index.html"><span class="red-span">Send</span>IT</a></h1>
+    <div class="container">
+            <div class="logo-t">
+                <h1><a href="index.html"><span class="red-span">Send</span>IT</a></h1>
+            </div>
+            <nav id="nav-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a id="prof-status"></a></li>
+                    <li><a id="create-status"></a></li>
+                    <li class="current"><a id="logstatus"></a></li>
+                    <li><a id="logstatusb"></a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="register.html">Sign up</a></li>
-            </ul>
-        </nav>
     </header>
     <div class="reg-forms">
         <form method="POST">
@@ -34,7 +37,18 @@
             <input type="email" name="email" id="email" placeholder="Enter  your email." required> <br>
             <label for="password">Password:</label>
             <input name="password" type="password" id="password" placeholder="Enter Password" required><br>
-            <button class="btn" type="submit">Log In</button>
+            <button class="btn" type="submit" id="login">Log In</button>
         </form>
 
+        <p id='error_output'></p>
         <p>Do not have an account? <a href="register.html">Create one here.</a></p>
+    </div>
+
+
+
+    <footer>
+        <p class="foot">SendIT &copy; 2018</p>
+    </footer>
+    <script src="../scripts/login.js"></script>
+</body>
+</html>
