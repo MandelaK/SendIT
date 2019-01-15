@@ -17,6 +17,10 @@
   overflow: hidden;
 }
 
+p {
+  text-align: center;
+}
+
 /* =================================================
 Registration Form styling.
 ==================================================*/
@@ -94,7 +98,7 @@ Profile page styling
   color: #166f92;
 }
 
-.prof-info {
+#prof-info {
   text-align: center;
   color: #44a7ce;
 }
@@ -120,7 +124,7 @@ Create PDO page styling
   margin-top: 5%;
 }
 
-input[name=package_name], input[name=destination], input[name=pickup_location], input[name=weight] {
+input[name=parcel_name],input[name=recipient_name], input[name=destination], input[name=pickup_location], input[name=weight] {
   width: 65%;
   padding: 15px;
   margin: 10px 0 10px 0;
@@ -208,10 +212,21 @@ Details page styling
 }
 
 .btn-c:hover{
-  box-shadow: 0 4px 4px 0 rgba(190, 184, 184, 0.349);
   background-color: #626dff;
   color: white;
   border: none;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  max-height: 5%;
+  color: white;
+  background-color: #166f92;
+  padding: 1px;
+  border-top: 1px;
+  text-align: center;
+  overflow: hidden;
 }
 
 /*=====================================================
@@ -274,8 +289,7 @@ header a:hover{
     width: 4%;
     height: 4%;
     position: absolute;
-    top: 4%;
-    left: 5%;
+    left: 12%;
 
 }
 
@@ -284,11 +298,10 @@ header a:hover{
 }
 
 .avatar {
-  width: 35%;
-  height: 30%;
-  position: absolute;
-  top: 25%;
-  left: 33%;
+  width: 50%;
+  height: 45%;
+  position: relative;
+  left: 25%;
 }
 
 #h1-index {
@@ -300,16 +313,8 @@ header a:hover{
 #what-we-do {
   font-family: Georgia, Times, 'Times New Roman', serif;
   text-align: center;
-  padding: 18% 5% 5% 5%;
-  font-size: 18px;
-}
-
-footer {
-  color: white;
-  background-color: #166f92;
-  padding: 20px;
-  margin-top: 20px;
-  text-align: center;
+  padding: 3%;
+  font-size: 20px;
 }
 
 /*================================================
@@ -350,4 +355,9 @@ button[name=center-b] {
 #why-change-d {
   text-align: center;
 
+}
+
+.center-center {
+  text-align: center;
+  margin: 1.5%;
 }
