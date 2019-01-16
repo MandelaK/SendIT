@@ -11,37 +11,49 @@
 
 <body>
     <header>
-        <a href="index.html">
-            <img src="../img/sendit.png" class="logo-p">
-        </a>
-        <div class="logo-t">
-            <h1><a href="index.html"><span class="red-span">Send</span>IT</a></h1>
+        <div class="container">
+            <div class="logo-t">
+                <h1><a href="index.html"><span class="red-span">Send</span>IT</a></h1>
+            </div>
+            <nav id="nav-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a id="prof-status"></a></li>
+                    <li class="current"><a id="create-status"></a></li>
+                    <li><a id="logstatus"></a></li>
+                    <li><a id="logstatusb"></a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="#">Log out</a></li>
-            </ul>
-        </nav>
     </header>
+
+    <div class="container">
     <h3 class="create-info">Please enter the following information so you may create a delivery order.</h3>
     <div class="create-order">
         <form method="POST">
-            <label for="package_name">Package Name</label>
-            <input name="package_name" id="package_name" required> <br>
+            <label for="parcel_name">Parcel Name</label>
+            <input name="parcel_name" id="parcel_name" required> <br>
+            <label for="recipient_name">Recipient Name</label>
+            <input name="recipient_name" id="recipient_name" required> <br>
             <label for="destination">Destination</label>
             <input name="destination" id="destination" required> <br>
             <label for="pickup_location">Pickup Location</label>
             <input name="pickup_location" id="pickup_location" required> <br>
             <label for="weight">Weight (in grams)</label>
             <input type="number" name="weight" id="weight">
-            <button class="btn" type="submit">Submit</button>
+            <button class="btn" type="submit" id="create-parcel">Submit</button>
         </form>
+
+        <p id="create-output"></p>
+        <p id="create-error"></p>
     </div>
+</div>
     <footer>
         <p class="foot">SendIT &copy; 2018</p>
     </footer>
+    <script src="../scripts/logout.js"></script>
+    <script src="../scripts/create.js"></script>
 </body>
 
 </html>
