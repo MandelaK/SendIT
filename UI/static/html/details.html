@@ -1,4 +1,4 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -11,91 +11,61 @@
 
 <body>
     <header>
-        <a href="index.html">
-            <img src="../img/sendit.png" class="logo-p">
-        </a>
-        <div class="logo-t">
-            <h1><a href="index.html"><span class="red-span">Send</span>IT</a></h1>
+        <div class="container">
+            <div class="logo-t">
+                <h1><a href="index.html"><span class="red-span">Send</span>IT</a></h1>
+            </div>
+            <nav id="nav-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a id="prof-status"></a></li>
+                    <li><a id="create-status"></a></li>
+                    <li><a id="logstatus"></a></li>
+                    <li><a id="logstatusb"></a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="#">Log out</a></li>
-            </ul>
-        </nav>
     </header>
+<div class="container">
+  <h4 id="error-feedback"></h4>
+  <h4 id="success-feedback"></h4>
+  <h3 id="user-note"></h3>
 
+  <div id="order-section">
 
-  <h3 id="user-note">Hello, here are the details regarding your Parcel
-    Delivery Order</h3>
-
-  <section>
-    <table class="order-details">
-      <tr>
-        <th class="order-h">Date Created</th>
-        <td>12/10/2018</td>
-      </tr>
-      <tr>
-        <th class="order-h">Order Name</th>
-        <td>Success Cards</td>
-      </tr>
-      <tr>
-        <th class="order-h">Created by</th>
-        <td>hopeful_parent</td>
-      </tr>
-      <tr>
-        <th class="order-h">Pickup Location</th>
-        <td>Nairobi, CBD</td>
-      </tr>
-      <tr>
-        <th class="order-h">Destination</th>
-        <td>Nanyuki, CBD</td>
-      </tr>
-      <tr>
-        <th class="order-h">Current Location</th>
-        <td>Nyeri</td>
-      </tr>
-      <tr>
-        <th class="order-h">Status</th>
-        <td>In Transit</td>
-      </tr>
-      <tr>
-        <th class="order-h">Order Number</th>
-        <td>#45980523w23we</td>
-      </tr>
-    </table>
-  </section>
+  </div>
   <hr>
 
   <h4 id="why-change-d">Please fill out the form below if you would like to change
     the destination of your current order. Additional fees apply.
   </h4>
-  <div>
-    <form id="change-d" method="POST">
-      <label for="new-d">New Destination</label> <br>
-      <input name="new-d" id="new-d" required> <br>
-      <p>Why are you changing your destination?</p>
-      <textarea form="change-d" rows=4 cols=50 placeholder="Would you like to tell us why you are changing the destination? Please use maximum of 500 characters."></textarea>
-      <br>
-      <button name="center-b" class="btn" type="submit">Submit</button>
-
+  </div>
+  <div class="center-center">
+    <form>
+      <label for="new-d">New Destination</label>
+      <input type="text" name="new-d" id="new-d" required>
+      <input type="button" id="change-destination" value="Submit" onclick="changeDestination()">
     </form>
   </div>
   <hr>
 
+
+
+<form class="center-center">
   <p id="ask-cancel">Would you like to cancel this delivery?</p>
-  <form id="user-control">
-      <label class="change-d">No</label>
-      <input type="radio" name="radio" checked="checked">
-      <label class="change-d">Yes</label>
-      <input type="radio" name="radio">
-      <button class="btn" type="submit">Confirm</button>
-  </form>
-  
+  <button type="button" id="cancel-delivery" onclick="cancelOrder()">Cancel Order</button>
+</form>
+
+
   <footer>
     <p class="foot">SendIT &copy; 2018</p>
   </footer>
+
+  <script src="../scripts/logout.js"></script>
+  <script src="../scripts/cancel.js"></script>
+  <script src="../scripts/destination.js"></script>
+  <script src="../scripts/details.js"></script>
 
 </body>
 
