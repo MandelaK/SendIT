@@ -10,77 +10,57 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.html">
-            <img src="../img/sendit.png" class="logo-p">
-        </a>
-        <div class="logo-t">
-            <h1><a href="index.html"><span class="red-span">Send</span>IT</a></h1>
+     <header>
+        <div class="container">
+            <div class="logo-t">
+                <h1><a href="index.html"><span class="red-span">Send</span>IT</a></h1>
+            </div>
+            <nav id="nav-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a id="prof-status"></a></li>
+                    <li><a id="create-status"></a></li>
+                    <li><a id="logstatus"></a></li>
+                    <li><a id="logstatusb"></a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="#">Log out</a></li>
-            </ul>
-        </nav>
     </header>
+<div id="container">
+    <h3 id="admin-note"></h3>
+    <h4 id="admin-error"></h4>
+    <h4 id="admin-success"></h4>
+</div>
+    <div id="order-section"></div>
 
-    <h3 id="admin-note">Hello. From this page you can change the current Location
-        and status of the order.
-    </h3>
-
-    <section>
-        <table class="order-details">
-            <tr>
-                <th class="order-h">Date Created</th>
-                <td>12/10/2018</td>
-            </tr>
-            <tr>
-                <th class="order-h">Order Name</th>
-                <td>Success Cards</td>
-            </tr>
-            <tr>
-                <th class="order-h">Created by</th>
-                <td>hopeful_parent</td>
-            </tr>
-            <tr>
-                <th class="order-h">Pickup Location</th>
-                <td>Nairobi, CBD</td>
-            </tr>
-            <tr>
-                <th class="order-h">Destination</th>
-                <td>Nanyuki, CBD</td>
-            </tr>
-            <tr>
-                <th class="order-h">Current Location</th>
-                <td>Nyeri</td>
-            </tr>
-            <tr>
-                <th class="order-h">Status</th>
-                <td>In Transit</td>
-            </tr>
-            <tr>
-                <th class="order-h">Order Number</th>
-                <td>#45980523w23we</td>
-            </tr>
-        </table>
-    </section>
-
-    <form id="admin-control">
+    <div class="center-center">
+    <form>
         <label for="current-loc">Change Current location</label>
-        <input type=text id="current-loc" required>
-        <p>Change the status of this delivery</p>
-        <label class="status">In transit</label>
-        <input type="radio" name="radio" checked="checked">
-        <label class="status">Delivered</label>
-        <input type="radio" name="radio">
-        <button class="btn" type="submit">Confirm</button>
+        <input type="text" id="current-loc" required>
+        <input type="button" onclick="changeLocation()" value="Change Location">
     </form>
 
+
+    <p>Change the status of this delivery</p>
+    <div id="change-status">
+        <form>
+        <select id="status">
+                <option value="transit">In Transit</option>
+                <option value="delivered">Delivered</option>
+            </select>
+            <input type="button" for="status" value="Submit" onclick="changeStatus()">
+        </form>
+    </div>
+    </div>
     <footer>
         <p class="foot">SendIT &copy; 2018</p>
     </footer>
+
+    <script src="../scripts/logout.js"></script>
+    <script src="../scripts/status.js"></script>
+    <script src="../scripts/location.js"></script>
+    <script src="../scripts/admin.js"></script>
 </body>
 
 </html>
