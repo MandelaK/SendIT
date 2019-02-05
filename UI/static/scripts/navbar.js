@@ -7,6 +7,7 @@ function createNav() {
     }
 
     else {
+        if(!window.localStorage.getItem('is_admin')){
         document.getElementById('logstatusb').innerHTML = 'Log Out';
         document.getElementById('logstatusb').setAttribute('href', '#');
         document.getElementById('logstatusb').setAttribute('onclick', 'logout()');
@@ -15,6 +16,13 @@ function createNav() {
         document.getElementById('create-status').innerHTML = 'Create Order';
         document.getElementById('create-status').setAttribute('href', 'create.html');
     }
-}
+        else {
+        document.getElementById('logstatusb').innerHTML = 'Log Out';
+        document.getElementById('logstatusb').setAttribute('href', '#');
+        document.getElementById('logstatusb').setAttribute('onclick', 'logout()');
+        document.getElementById('prof-status').innerHTML = 'Profile';
+        document.getElementById('prof-status').setAttribute('href', 'profile.html');
+        }
+}}
 
 createNav();

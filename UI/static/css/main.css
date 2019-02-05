@@ -89,6 +89,16 @@ tr:nth-child(even) {
   background-color: #91cee5;
 }
 
+.table-wrap {
+  overflow-x: auto;
+  margin-bottom: 3%;
+}
+
+.table-wrap table {
+  width: 80%;
+  margin: auto;
+}
+
 /* ======================================================
 Profile page styling
 ======================================================= */
@@ -360,4 +370,22 @@ button[name=center-b] {
 .center-center {
   text-align: center;
   margin: 1.5%;
+}
+
+#error-output {
+  color: red;
+  border: 1px solid #fbbfbf;
+  max-width: -moz-fit-content;
+  margin: 1% auto 10px auto;
+  font-size: larger;
+  text-align: center;
+}
+
+#success-feedback {
+  color: green;
+  border: 1px solid #fbbfbf;
+  max-width: -moz-fit-content;
+  margin: 1% auto 10px auto;
+  font-size: larger;
+  text-align: center;
 }

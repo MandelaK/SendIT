@@ -13,8 +13,6 @@ window.onload = function(parcel_id) {
         document.getElementById('logstatusb').setAttribute('onclick', 'logout()');
         document.getElementById('prof-status').innerHTML = 'Profile';
         document.getElementById('prof-status').setAttribute('href', 'profile.html');
-        document.getElementById('create-status').innerHTML = 'Create Order';
-        document.getElementById('create-status').setAttribute('href', 'create.html');
 
     fetch(u, {
         method: 'GET',
