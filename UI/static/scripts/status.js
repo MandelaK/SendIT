@@ -4,6 +4,8 @@ const url = 'https://sendit-api-v2-keith.herokuapp.com/api/v2/parcels/' + parcel
 
 function changeStatus() {
     let status = document.getElementById('status').value;
+    let confirmation = confirm('Are you sure you want to change the status?');
+    if (confirmation){
     fetch(url, {
         method: 'PUT',
         headers: {
@@ -21,12 +23,18 @@ function changeStatus() {
         let error = data['Error'];
 
         if (success) {
-            document.getElementById('admin-success').innerHTML = success;
+            document.getElementById('error-output').innerHTML = '';
+            document.getElementById('success-feedback').innerHTML = success + '. You will be redirected to your profile in 5 seconds.';
+            window.scrollBy(0, -window.innerHeight);
+            setTimeout(() => {
+                redirect: window.location.replace('profile.html');}, 5000);
         }
 
         else {
-            document.getElementById('admin-error').innerHTML = error;
+            document.getElementById('success-feedback').innerHTML = '';
+            document.getElementById('error-output').innerHTML = error;
+            window.scrollBy(0, -window.innerHeight);
         }
     });
 
-}
+}}

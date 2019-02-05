@@ -371,3 +371,21 @@ button[name=center-b] {
   text-align: center;
   margin: 1.5%;
 }
+
+#error-output {
+  color: red;
+  border: 1px solid #fbbfbf;
+  max-width: -moz-fit-content;
+  margin: 1% auto 10px auto;
+  font-size: larger;
+  text-align: center;
+}
+
+#success-feedback {
+  color: green;
+  border: 1px solid #fbbfbf;
+  max-width: -moz-fit-content;
+  margin: 1% auto 10px auto;
+  font-size: larger;
+  text-align: center;
+}
