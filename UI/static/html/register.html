@@ -21,11 +21,10 @@
                     <li><a id="prof-status"></a></li>
                     <li><a id="create-status"></a></li>
                     <li><a id="logstatus"></a></li>
-                    <li><a id="logstatusb"></a></li>
+                    <li class="current"><a id="logstatusb"></a></li>
                 </ul>
             </nav>
         </div>
-    </header>
     </header>
     <div class="container">
         <div class="reg-forms">
@@ -33,6 +32,8 @@
                 <h1 class="reg-head">Create an account</h1>
                 <p class="reg-info">Please enter your details to create an account</p>
                 <hr>
+                <p id="success-feedback"></p>
+                <p id="error-output"></p>
                 <label for="first_name">First Name: </label>
                 <input type="text" id="first_name" placeholder="Enter your first name." required> <br>
                 <label for="last_name">Last Name: </label>
@@ -46,16 +47,11 @@
                 <label for="password_repeat">Repeat Your Password:</label>
                 <input name="password_repeat" type="password" id="password_repeat" placeholder="Repeat password"
                     required> <br>
-                <input type="checkbox" name="eula" id="eula" required>
-                <label for="eula">I have read the <a href="#">Terms of service</a> and <a href="#">privacy agreement</a> and agree with all terms included therein.</label> <br>
-                <button class="btn" type="submit" id="register">Register</button>
+                <button class="btn" type="submit" id="register">Sign Up</button>
             </form>
-
+            <hr>
             <p>Do you already have an account? <a href="login.html">Sign in here.</a></p>
         </div>
-
-    <p id="login-success"></p>
-    <p id="login-fail"></p>
 
 </div>
 

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 
 <head>
     <meta charset="utf-8" />
@@ -27,12 +26,13 @@
             </nav>
         </div>
     </header>
+
     <div class="reg-forms">
         <form method="POST">
             <h1 class="reg-head">Log In</h1>
             <p class="reg-info">Please enter your details to log in.</p>
             <hr>
-
+            <p id='error-output'></p>
             <label for="email">Email: </label>
             <input type="email" name="email" id="email" placeholder="Enter  your email." required> <br>
             <label for="password">Password:</label>
@@ -40,7 +40,6 @@
             <button class="btn" type="submit" id="login">Log In</button>
         </form>
 
-        <p id='error_output'></p>
         <p>Do not have an account? <a href="register.html">Create one here.</a></p>
     </div>
 
