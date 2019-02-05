@@ -89,6 +89,16 @@ tr:nth-child(even) {
   background-color: #91cee5;
 }
 
+.table-wrap {
+  overflow-x: auto;
+  margin-bottom: 3%;
+}
+
+.table-wrap table {
+  width: 80%;
+  margin: auto;
+}
+
 /* ======================================================
 Profile page styling
 ======================================================= */

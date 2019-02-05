@@ -33,8 +33,6 @@ window.onload = function() {
                             <th>Parcel Name</th>
                             <th>Recipient Name</th>
                             <th>Status</th>
-                            <th>Weight</th>
-                            <th>Pickup Location</th>
                             <th>Current Location</th>
                             <th>Destination</th>
                         </tr>`;
@@ -45,8 +43,6 @@ window.onload = function() {
                                     <td><a href='details.html?parcel_id=${res['parcel_id']}'>${res['parcel_name']}</a></td>
                                     <td>${res['recipient_name']}</td>
                                     <td>${res['status']}</td>
-                                    <td>${res['weight']}</td>
-                                    <td>${res['pickup_location']}</td>
                                     <td>${res['current_location']}</td>
                                     <td>${res['destination']}</td>
                                 </tr>
