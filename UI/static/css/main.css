@@ -1,14 +1,32 @@
-/* * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+/*Global styling*/
+html {
+  height: 100%;
   box-sizing: border-box;
 }
- */
- body {
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 0;
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
   margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   background-color: #e5ffff;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: whitesmoke;
+  background-color: #82d5ff;
+  text-align: center;
 }
 
 .container{
@@ -21,53 +39,6 @@ p {
   text-align: center;
 }
 
-/* =================================================
-Registration Form styling.
-==================================================*/
-
-.reg-forms {
-  margin: 0;
-  display: inline;
-  font-size: 16px;
-  outline: none;
-  padding: 10px;
-  text-align: center;
-}
-
-.reg-forms input {
-  margin: 5px;
-}
-
-.reg-head {
-  color: aqua;
-}
-
-.reg-info {
-  color: rgb(0, 0, 0);
-}
-
-
-/*======================================================
-Generic button styling
-====================================================== */
-.btn{
-  color: #23ccff;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-.btn:hover{
-  box-shadow: 0 4px 4px 0 rgba(190, 184, 184, 0.349);
-  background-color: #626dff;
-  color: white;
-  border: none;
-}
-.btn:focus{
-  outline: none;
-  background-color: #b23850;
-}
-
 /* =====================================================
 Generic table styling
 ======================================================= */
@@ -75,8 +46,6 @@ Generic table styling
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 80%;
-  margin-left: 10%;
 }
 
 td, th {
@@ -99,144 +68,38 @@ tr:nth-child(even) {
   margin: auto;
 }
 
-/* ======================================================
-Profile page styling
-======================================================= */
-
-.prof-head {
-  text-align: center;
-  color: #166f92;
-}
-
-#prof-info {
-  text-align: center;
-  color: #44a7ce;
-}
-
-.prof-note {
-  text-align: center;
-  padding-top: 1%;
-  padding-bottom: 5%;
-}
-
-
-/* =======================================================
-Create PDO page styling
-======================================================= */
-
-.create-info {
-  text-align: center;
-  color: #44a7ce;
-}
-
-.create-order {
-  margin-left: 25%;
-  margin-top: 5%;
-}
-
-input[name=parcel_name],input[name=recipient_name], input[name=destination], input[name=pickup_location], input[name=weight] {
-  width: 65%;
-  padding: 15px;
-  margin: 10px 0 10px 0;
-  display: block;
-  font-size: 1em;
-  border: 1px solid #8bb9ec;
-  outline: none;
-}
-
-.order-details {
-  border: blueviolet;
-  margin-top: 5%;
-}
-
-.order-h {
-  border: #b23850;
-}
-
-/*===========================================
-Details page styling
-============================================*/
-.details-c {
-      display: block;
-      /* float: left; */
-      position: relative;
-      padding-left: 30px;
-      margin-bottom: 12px;
-      cursor: pointer;
-      font-size: 16px;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-}
-
-.details-c input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.mark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: rgb(235, 251, 252);
-  border-radius: 50%;
-}
-
-.details-c:hover input ~ .mark {
-  background-color: rgb(63, 63, 63);
-}
-
-.details-c input:checked ~ .mark {
-  background-color: rgb(92, 104, 172);
-}
-
-.mark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.details-c input:checked ~ .mark:after {
-  display: block;
-}
-
-.details-c .mark:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: white;
-}
-
-.btn-c {
+/*======================================================
+Generic button styling
+====================================================== */
+.btn{
   color: #23ccff;
   cursor: pointer;
-  text-align: center;
+  padding: 10px 5px;
   text-decoration: none;
   display: inline-block;
+  margin-top: 10px;
+  width: 15%;
 }
-
-.btn-c:hover{
+.btn:hover{
+  /*box-shadow: 0 4px 4px 0 rgba(190, 184, 184, 0.349);*/
   background-color: #626dff;
   color: white;
-  border: none;
+  /*border: none;*/
 }
 
-footer {
-  bottom: 0;
-  width: 100%;
-  max-height: 5%;
+.btn-cancel {
+  color: #ff1b00cc;
+  cursor: pointer;
+  padding: 10px 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  width: 15%;
+}
+
+.btn-cancel:hover{
+  background-color: #ff1b00cc;
   color: white;
-  background-color: #166f92;
-  padding: 1px;
-  border-top: 1px;
-  text-align: center;
-  overflow: hidden;
 }
 
 /*=====================================================
@@ -246,8 +109,9 @@ header {
   background: #82d5ff;
   color: white;
   padding-top: 15px;
+  padding-bottom: 15px;
   min-height: 50px;
-  border-bottom: #ffffff 2px solid;
+  border-bottom: #ffffff 3px solid;
 }
 
 header a {
@@ -306,6 +170,83 @@ header a:hover{
 .red-span {
   color: rgb(0, 153, 255);
 }
+
+/* =================================================
+Registration Form styling.
+==================================================*/
+
+.reg-forms {
+  margin: 0;
+  display: inline;
+  font-size: 16px;
+  outline: none;
+  padding: 10px;
+  text-align: center;
+}
+
+.reg-forms input {
+  margin: 5px;
+}
+
+.reg-head {
+  color: aqua;
+}
+
+/* ======================================================
+Profile page styling
+======================================================= */
+
+.prof-head {
+  text-align: center;
+  color: #166f92;
+}
+
+#prof-info {
+  text-align: center;
+  color: #44a7ce;
+}
+
+#prof-note {
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 5%;
+}
+
+
+/* =======================================================
+Create PDO page styling
+======================================================= */
+
+.create-info {
+  text-align: center;
+  color: #44a7ce;
+}
+
+.create-order {
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+input[name=parcel_name],input[name=recipient_name], input[name=destination], input[name=pickup_location], input[name=weight] {
+  width: 65%;
+  padding: 15px;
+  margin: 10px 0 10px 0;
+  display: block;
+  font-size: 1em;
+  border: 1px solid #8bb9ec;
+  outline: none;
+}
+
+.order-details {
+  border: blueviolet;
+  margin-top: 5%;
+}
+
+.order-h {
+  border: #b23850;
+}
+
+
 
 .avatar {
   width: 50%;
@@ -375,7 +316,7 @@ button[name=center-b] {
 #error-output {
   color: red;
   border: 1px solid #fbbfbf;
-  max-width: -moz-fit-content;
+  display: table;
   margin: 1% auto 10px auto;
   font-size: larger;
   text-align: center;
@@ -384,7 +325,7 @@ button[name=center-b] {
 #success-feedback {
   color: green;
   border: 1px solid #fbbfbf;
-  max-width: -moz-fit-content;
+  display: table;
   margin: 1% auto 10px auto;
   font-size: larger;
   text-align: center;

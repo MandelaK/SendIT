@@ -23,6 +23,7 @@ window.onload = function() {
         document.getElementById('prof-status').innerHTML = 'Profile';
         document.getElementById('prof-status').setAttribute('href', 'profile.html');
         }
+
         fetch(url, {
             method: 'GET',
             headers: {
@@ -34,7 +35,26 @@ window.onload = function() {
         })
         .then(res => res.json())
         .then(data => {
-            if (data['parcels']) {
+            if (data['Error'] == 'You have no parcels made' && !window.localStorage.getItem('is_admin')) {
+                let output = `
+                    <p>Hello ${window.localStorage.getItem('email')}, it seems you are new here and haven't made any order. Click the link on your navigation bar or <a href='create.html'> click here</a> to make an order.</p>
+                `
+                let newNote = `
+                    <p class='prof-note'> You have placed no orders. Please make one in order to manipulate it.</p>
+                `
+                document.getElementById('prof-info').innerHTML = output;
+                document.getElementById('prof-note').innerHTML = newNote;
+
+            }
+
+            else if (data['Error'] == 'You have no parcels made' && window.localStorage.getItem('is_admin')) {
+                let output = `
+                    <p>Hello admin, it seems our users have not made any orders on the platform. Check back when there are more orders.. </p>
+                    `
+                    document.getElementById('prof-info').innerHTML = output;
+            }
+
+            else if (data['parcels']) {
                 let output = `
                     <table id="prof-table">
                         <tr>
