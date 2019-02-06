@@ -48,10 +48,10 @@ login.onclick = function(e) {
         }}
 
         else if (error) {
-            document.getElementById('error_output').innerHTML = error;
+            document.getElementById('error-output').innerHTML = error;
+            window.scrollBy(0, -window.innerHeight);
             console.log(error);
 
-            document.getElementById('email').value = '';
             document.getElementById('password').value = '';
         }
     }

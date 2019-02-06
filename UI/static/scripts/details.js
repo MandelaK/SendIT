@@ -82,7 +82,12 @@ window.onload = function(e) {
         document.getElementById('order-section').innerHTML = output;
 
 
-}})}
+}
+        else{
+            document.getElementById('error-output').innerHTML = error + ' You will be redirected to your profile in 5 seconds.';
+            setTimeout(() => {
+                redirect: window.location.replace('profile.html');}, 5000);
+        }})}
     else {
         redirect: window.location.replace("admin.html?parcel_id=" + parcel_id);
     };}

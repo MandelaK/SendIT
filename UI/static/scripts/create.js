@@ -44,16 +44,21 @@ create.onclick = function(e) {
 
     .then(res => res.json())
     .then(data => {
-        let output = document.getElementById('create-output');
         let success = data['Success'];
         let error = data['Error'];
 
         if (success) {
-            output.innerHTML = success + ' You can go back to your profile or make another order';
+            document.getElementById('error-output').innerHTML = '';
+            document.getElementById('success-feedback').innerHTML = success + ' You will be redirected to your profile in 5 seconds';
+            window.scrollBy(0, -window.innerHeight);
+            setTimeout(() => {
+                redirect: window.location.replace('profile.html');}, 5000);
         }
 
         else {
-            output.innerHTML = error + '! Please try that again';
+            document.getElementById('success-feedback').innerHTML = '';
+            document.getElementById('error-output').innerHTML = error + '! Please try that again';
+            window.scrollBy(0, -window.innerHeight);
         }
     })
 }

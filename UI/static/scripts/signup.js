@@ -3,6 +3,8 @@ const url = 'https://sendit-api-v2-keith.herokuapp.com/api/v2/auth/signup';
 if (window.localStorage.getItem('email') == null) {
     document.getElementById('logstatus').innerHTML = 'Log In';
     document.getElementById('logstatus').setAttribute('href', 'login.html');
+    document.getElementById('logstatusb').innerHTML = 'Sign Up';
+    document.getElementById('logstatusb').setAttribute('href', 'register.html');
 }
 
 function resetForm() {
@@ -18,7 +20,7 @@ if (window.localStorage.getItem('email') || window.localStorage.getItem('token')
     redirect: window.location.replace('profile.html');
 }
 
-let login = document.getElementById('register');
+let register = document.getElementById('register');
 register.onclick = function(e) {
     e.preventDefault();
     let first_name = document.getElementById('first_name').value;
@@ -51,15 +53,17 @@ register.onclick = function(e) {
 
         if (success) {
 
-            document.getElementById('login-success').innerHTML = success;
+            document.getElementById('error-output').innerHTML = '';
+            document.getElementById('success-feedback').innerHTML = success;
             setTimeout(() => {
-                redirect: window.location.replace('login.html');}, 5000);
+                redirect: window.location.replace('login.html');}, 3000);
 
             resetForm();
             }
 
         else if (error) {
-            document.getElementById('login-fail').innerHTML = error;
+            document.getElementById('success-feedback').innerHTML = '';
+            document.getElementById('error-output').innerHTML = error;
             //resetForm();
         }});
 }
